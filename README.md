@@ -50,3 +50,12 @@ Unocss({
 })
 ```
 
+## List of variants
+
+| Variant       | Inverse variant   |
+| ------------- | ----------------- |
+| `ui-open`     | `ui-not-open`     |
+| `ui-checked`  | `ui-not-checked`  |
+| `ui-selected` | `ui-not-selected` |
+| `ui-active`   | `ui-not-active`   |
+| `ui-disabled` | `ui-not-disabled` |

@@ -47,4 +47,39 @@ const presetPrimitives = (options: StatesOptions = {}): Preset => {
   }
 }
 
+/**
+ * @public
+ */
+export interface HeadlessUiOptions {
+  /**
+   * @default 'ui'
+   */
+  prefix?: string
+}
+
+const presetHeadlessUi = (options: HeadlessUiOptions = {}): Preset => {
+  const {
+    prefix = 'ui',
+  } = options
+  return presetPrimitives({ prefix })
+}
+
+/**
+ * @public
+ */
+export interface RadixUiOptions {
+  /**
+   * @default 'ui'
+   */
+  prefix?: string
+}
+
+const presetRadixUi = (options: RadixUiOptions = {}): Preset => {
+  const {
+    prefix = 'ui',
+  } = options
+  return presetPrimitives({ prefix, selector: 'data-state' })
+}
+
+export { presetHeadlessUi, presetRadixUi }
 export default presetPrimitives

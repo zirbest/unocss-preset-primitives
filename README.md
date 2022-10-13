@@ -32,7 +32,7 @@ Unocss({
 })
 ```
 
-## primitives
+## custom
 ```typescript
 // custom
 import presetPrimitives from 'unocss-preset-primitives'

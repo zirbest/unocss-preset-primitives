@@ -1,5 +1,5 @@
 {
-  "name": "uno-preset-states",
+  "name": "uno-preset-primitives",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.12.0",
@@ -7,12 +7,12 @@
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/zirbest",
-  "homepage": "https://github.com/zirbest/uno-preset-states#readme",
+  "homepage": "https://github.com/zirbest/uno-preset-primitives#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zirbest/uno-preset-states.git"
+    "url": "git+https://github.com/zirbest/uno-preset-primitives.git"
   },
-  "bugs": "https://github.com/zirbest/uno-preset-states/issues",
+  "bugs": "https://github.com/zirbest/uno-preset-primitives/issues",
   "keywords": [
     "unocss",
     "preset",

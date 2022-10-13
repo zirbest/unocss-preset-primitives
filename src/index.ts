@@ -1,5 +1,4 @@
 import type { Preset } from 'unocss'
-import { PresetOptions } from 'unocss'
 
 /**
  * @public
@@ -19,7 +18,7 @@ export interface StatesOptions {
   selector?: string
 }
 
-const presetStates = (options: StatesOptions = {}): Preset => {
+const presetPrimitives = (options: StatesOptions = {}): Preset => {
   const {
     prefix = 'ui',
     states = 'open|checked|selected|active|disabled',
@@ -27,7 +26,7 @@ const presetStates = (options: StatesOptions = {}): Preset => {
   } = options
 
   return {
-    name: 'unocss-preset-states',
+    name: 'unocss-preset-primitives',
     variants: [
       (matcher: string) => {
         const regex = new RegExp(`^${prefix}(-not)?-(${states})[:-]`)
@@ -48,4 +47,4 @@ const presetStates = (options: StatesOptions = {}): Preset => {
   }
 }
 
-export default presetStates
+export default presetPrimitives

@@ -1,2 +1,2 @@
-# pkg-name
+# unocss-preset-primitives
 

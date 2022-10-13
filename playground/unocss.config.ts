@@ -13,10 +13,10 @@ export default defineConfig({
     presetAttributify(),
     presetHeadlessUi(),
     presetIcons({
-      cdn: "https://esm.sh/",
+      cdn: 'https://esm.sh/',
       scale: 1.2,
       warn: true,
     }),
   ],
-  transformers: [ transformerVariantGroup(), ]
+  transformers: [transformerVariantGroup()],
 })

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 </script>
 
 <template>
@@ -30,54 +30,53 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
-            <button
-              class="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-              :class="[ active ? 'bg-violet-500 text-white' : 'text-gray-900' ]"
-            >
-              <span
-                class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
-                aria-hidden="true"
-              />
-              js api
-            </button>
+              <button
+                class="group flex w-full items-center rounded-md px-2 py-2 text-sm"
+                :class="[active ? 'bg-violet-500 text-white' : 'text-gray-900']"
+              >
+                <span
+                  class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
+                  aria-hidden="true"
+                />
+                js api
+              </button>
             </MenuItem>
 
             <MenuItem>
-            <button
-              ui-active="bg-violet-500 text-white" ui-not-active="text-gray-900"
-              class="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-            >
-              <span
-                class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
-                aria-hidden="true"
-              />
-              presetAttributify
-            </button>
+              <button
+                ui-active="bg-violet-500 text-white" ui-not-active="text-gray-900"
+                class="group flex w-full items-center rounded-md px-2 py-2 text-sm"
+              >
+                <span
+                  class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
+                  aria-hidden="true"
+                />
+                presetAttributify
+              </button>
             </MenuItem>
 
             <MenuItem>
-            <button
-              class="ui-active:(bg-violet-500 text-white) ui-not-active:(text-gray-900) group flex w-full items-center rounded-md px-2 py-2 text-sm"
-            >
-              <span
-                class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
-                aria-hidden="true"
-              />
+              <button
+                class="ui-active:(bg-violet-500 text-white) ui-not-active:(text-gray-900) group flex w-full items-center rounded-md px-2 py-2 text-sm"
+              >
+                <span
+                  class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
+                  aria-hidden="true"
+                />
                 transformerVariantGroup
-            </button>
+              </button>
             </MenuItem>
 
-
             <MenuItem>
-            <button
-              class="ui-active:bg-violet-5 ui-active:text-white ui-not-active:text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm"
-            >
-              <span
-                class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
-                aria-hidden="true"
-              />
+              <button
+                class="ui-active:bg-violet-5 ui-active:text-white ui-not-active:text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm"
+              >
+                <span
+                  class="i-radix-icons-drawing-pin-filled mr-2 h-5 w-5 text-violet-400"
+                  aria-hidden="true"
+                />
                 presetUno
-            </button>
+              </button>
             </MenuItem>
           </div>
         </MenuItems>

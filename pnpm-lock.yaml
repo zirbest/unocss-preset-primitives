@@ -11,6 +11,7 @@ importers:
       '@vitest/ui': ^0.24.1
       bumpp: ^8.2.1
       eslint: ^8.23.1
+      eslint-plugin-vue: ^9.6.0
       esno: ^0.16.3
       pnpm: ^7.12.0
       rimraf: ^3.0.2
@@ -29,6 +30,7 @@ importers:
       '@vitest/ui': 0.24.1
       bumpp: 8.2.1
       eslint: 8.23.1
+      eslint-plugin-vue: 9.6.0_eslint@8.23.1
       esno: 0.16.3
       pnpm: 7.12.0
       rimraf: 3.0.2
@@ -133,7 +135,7 @@ packages:
     dependencies:
       '@antfu/eslint-config-ts': 0.27.0_irgkl5vooow2ydyo6aokmferha
       eslint: 8.23.1
-      eslint-plugin-vue: 9.5.1_eslint@8.23.1
+      eslint-plugin-vue: 9.6.0_eslint@8.23.1
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -157,7 +159,7 @@ packages:
       eslint-plugin-n: 15.2.5_eslint@8.23.1
       eslint-plugin-promise: 6.0.1_eslint@8.23.1
       eslint-plugin-unicorn: 43.0.2_eslint@8.23.1
-      eslint-plugin-vue: 9.5.1_eslint@8.23.1
+      eslint-plugin-vue: 9.6.0_eslint@8.23.1
       eslint-plugin-yml: 1.1.0_eslint@8.23.1
       jsonc-eslint-parser: 2.1.0
       yaml-eslint-parser: 1.1.0
@@ -2524,8 +2526,8 @@ packages:
       strip-indent: 3.0.0
     dev: true
 
-  /eslint-plugin-vue/9.5.1_eslint@8.23.1:
-    resolution: {integrity: sha512-Y0sL2RY7Xc9S8kNih9lbwHIDmewUg9bfas6WSzsOWRgDXhIHKxRBZYNAnVcXBFfE+bMWHUA5GLChl7TcTYUI8w==}
+  /eslint-plugin-vue/9.6.0_eslint@8.23.1:
+    resolution: {integrity: sha512-zzySkJgVbFCylnG2+9MDF7N+2Rjze2y0bF8GyUNpFOnT8mCMfqqtLDJkHBuYu9N/psW1A6DVbQhPkP92E+qakA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0

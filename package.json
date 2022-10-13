@@ -1,20 +1,22 @@
 {
-  "name": "uno-preset-primitives",
+  "name": "unocss-preset-primitives",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.12.0",
-  "description": "",
+  "description": "A UnoCSS preset",
   "author": "zirbest <zirbst@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/zirbest",
-  "homepage": "https://github.com/zirbest/uno-preset-primitives#readme",
+  "homepage": "https://github.com/zirbest/unocss-preset-primitives#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zirbest/uno-preset-primitives.git"
+    "url": "git+https://github.com/zirbest/unocss-preset-primitives.git"
   },
-  "bugs": "https://github.com/zirbest/uno-preset-primitives/issues",
+  "bugs": "https://github.com/zirbest/unocss-preset-primitives/issues",
   "keywords": [
     "unocss",
+    "unocss-preset",
+    "unocss-preset-primitives",
     "preset",
     "primitives",
     "headlessui",
@@ -40,6 +42,7 @@
     }
   },
   "files": [
+    "README.md",
     "dist"
   ],
   "scripts": {

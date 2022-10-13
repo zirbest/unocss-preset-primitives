@@ -5,7 +5,7 @@ import presetPrimitives, { presetHeadlessUi, presetRadixUi } from '../src/index'
 describe('unocss-preset-primitives', () => {
   const uno = createGenerator({
     rules: [['foo', { name: 'bar' }]],
-    presets: [presetPrimitives({ prefix: 'ui', states: 'open|disable', selector: 'data-headlessui-state' })],
+    presets: [presetPrimitives({ prefix: 'ui', variants: 'open|disable', selector: 'data-headlessui-state' })],
   })
 
   test('should generate css for an exposed state', async () => {

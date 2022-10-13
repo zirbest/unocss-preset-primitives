@@ -11,7 +11,7 @@ export interface StatesOptions {
   /**
    * @default 'open|checked|selected|active|disabled'
    */
-  states?: string
+  variants?: string
   /**
    * @default 'data-headlessui-state'
    */
@@ -21,7 +21,7 @@ export interface StatesOptions {
 const presetPrimitives = (options: StatesOptions = {}): Preset => {
   const {
     prefix = 'ui',
-    states = 'open|checked|selected|active|disabled',
+    variants = 'open|checked|selected|active|disabled',
     selector = 'data-headlessui-state',
   } = options
 
@@ -29,7 +29,7 @@ const presetPrimitives = (options: StatesOptions = {}): Preset => {
     name: 'unocss-preset-primitives',
     variants: [
       (matcher: string) => {
-        const regex = new RegExp(`^${prefix}(-not)?-(${states})[:-]`)
+        const regex = new RegExp(`^${prefix}(-not)?-(${variants})[:-]`)
         const match = matcher.match(regex)
         if (match) {
           return {

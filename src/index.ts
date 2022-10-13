@@ -3,7 +3,7 @@ import type { Preset } from 'unocss'
 /**
  * @public
  */
-export interface StatesOptions {
+export interface PrimitivesOptions {
   /**
    * @default 'ui'
    */
@@ -18,7 +18,7 @@ export interface StatesOptions {
   selector?: string
 }
 
-const presetPrimitives = (options: StatesOptions = {}): Preset => {
+const presetPrimitives = (options: PrimitivesOptions = {}): Preset => {
   const {
     prefix = 'ui',
     variants = 'open|checked|selected|active|disabled',

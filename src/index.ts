@@ -1,2 +1,51 @@
-export const one = 1
-export const two = 2
+import type { Preset } from 'unocss'
+import { PresetOptions } from 'unocss'
+
+/**
+ * @public
+ */
+export interface StatesOptions {
+  /**
+   * @default 'ui'
+   */
+  prefix?: string
+  /**
+   * @default 'open|checked|selected|active|disabled'
+   */
+  states?: string
+  /**
+   * @default 'data-headlessui-state'
+   */
+  selector?: string
+}
+
+const presetStates = (options: StatesOptions = {}): Preset => {
+  const {
+    prefix = 'ui',
+    states = 'open|checked|selected|active|disabled',
+    selector = 'data-headlessui-state',
+  } = options
+
+  return {
+    name: 'unocss-preset-states',
+    variants: [
+      (matcher: string) => {
+        const regex = new RegExp(`^${prefix}(-not)?-(${states})[:-]`)
+        const match = matcher.match(regex)
+        if (match) {
+          return {
+            matcher: matcher.slice(match[0].length),
+            selector: (s: any) => (match[1] === '-not')
+              ? `${s}[${selector}]:not([${selector}~='${match[2]}'])`
+              : `${s}[${selector}~='${match[2]}']`,
+          }
+        }
+        else {
+          return matcher
+        }
+      },
+    ],
+  }
+}
+
+export default presetStates

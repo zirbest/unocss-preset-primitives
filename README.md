@@ -1,6 +1,6 @@
 # unocss-preset-primitives
 
-``bash
+```bash
 npm i -D unocss-preset-primitives
 ```
 

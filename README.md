@@ -1,5 +1,5 @@
 # unocss-preset-primitives
-Utilities and variants for styling (headlessui)[https://github.com/zirbest/unocss-preset-primitives#headlessui] (radix-ui)[https://github.com/zirbest/unocss-preset-primitives#radix-ui] state or (custom)[https://github.com/zirbest/unocss-preset-primitives#custom] one
+Utilities and variants for styling [headlessui](https://github.com/zirbest/unocss-preset-primitives#headlessui) [radix-ui](https://github.com/zirbest/unocss-preset-primitives#radix-ui) state or [custom](https://github.com/zirbest/unocss-preset-primitives#custom) one
 
 ```bash
 npm i -D unocss-preset-primitives

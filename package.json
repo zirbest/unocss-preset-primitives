@@ -55,10 +55,8 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "unocss": "^0.45.29"
-  },
   "devDependencies": {
+    "unocss": "^0.45.29",
     "@antfu/eslint-config": "^0.27.0",
     "@antfu/ni": "^0.18.0",
     "@antfu/utils": "^0.5.2",

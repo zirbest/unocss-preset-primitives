@@ -1,4 +1,4 @@
-import type { Preset } from 'unocss'
+import type { Preset } from '@unocss/core'
 
 /**
  * @public

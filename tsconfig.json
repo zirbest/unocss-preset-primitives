@@ -9,7 +9,7 @@
     "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
+    "skipDefaultLibCheck": true
   },
   "exclude": [
     "**/dist/**",
@@ -18,4 +18,4 @@
     "**/examples/**",
     "**/test/dts/**"
   ]
-  }
+}

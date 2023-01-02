@@ -78,7 +78,8 @@ const presetRadixUi = (options: RadixUiOptions = {}): Preset => {
   const {
     prefix = 'ui',
   } = options
-  return presetPrimitives({ prefix, selector: 'data-state' })
+  const variants = 'active|checked|closed|delayed-open|hidden|inactive|indeterminate|instant-open|off|on|open|unchecked|visible'
+  return presetPrimitives({ prefix, variants, selector: 'data-state' })
 }
 
 /**

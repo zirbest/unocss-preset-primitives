@@ -41,7 +41,7 @@ Unocss({
   presets: [
     presetUno(),
     // default options {prefix: 'ui'}
-    presetHeadlessUi(/* options */),
+    presetRadixUi(/* options */),
   ],
 })
 ```

@@ -1,7 +1,7 @@
 {
   "name": "unocss-preset-primitives",
   "type": "module",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "packageManager": "pnpm@7.12.0",
   "description": "A UnoCSS preset and variants for styling headlessui, radix-ui state or custom one",
   "author": "zirbest <zirbst@gmail.com>",

@@ -41,11 +41,25 @@ Unocss({
   presets: [
     presetUno(),
     // default options {prefix: 'ui'}
-    presetHeadlessUi(/* options */),
+    presetRadixUi(/* options */),
   ],
 })
 ```
 
+## kobalte
+```typescript
+// kobalte
+import { presetKobalte } from 'unocss-preset-primitives'
+import presetUno from '@unocss/preset-uno'
+
+Unocss({
+  presets: [
+    presetUno(),
+    // default options {prefix: 'ui'}
+    presetKobalte(/* options */),
+  ],
+})
+```
 ## custom
 ```typescript
 // custom

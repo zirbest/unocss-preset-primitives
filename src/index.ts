@@ -81,5 +81,23 @@ const presetRadixUi = (options: RadixUiOptions = {}): Preset => {
   return presetPrimitives({ prefix, selector: 'data-state' })
 }
 
-export { presetHeadlessUi, presetRadixUi }
+/**
+ * @public
+ */
+export interface KobalteOptions {
+  /**
+   * @default 'ui'
+   */
+  prefix?: string
+}
+
+const presetKobalte = (options: KobalteOptions = {}): Preset => {
+  const {
+    prefix = 'ui',
+  } = options
+  const variants = 'valid|invalid|required|disabled|readonly|checked|indeterminate|selected|pressed|expanded|hover|focus|focus-visible|active'
+  return presetPrimitives({ prefix, variants, selector: 'data' })
+}
+
+export { presetHeadlessUi, presetRadixUi, presetKobalte }
 export default presetPrimitives

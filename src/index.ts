@@ -16,6 +16,11 @@ export interface PrimitivesOptions {
    * @default 'data-headlessui-state'
    */
   selector?: string
+  /**
+   * @default 'false'
+   * use [data~='checked'] or [data-checked]
+   */
+  isAttrBoolean?: boolean
 }
 
 const presetPrimitives = (options: PrimitivesOptions = {}): Preset => {
@@ -23,6 +28,7 @@ const presetPrimitives = (options: PrimitivesOptions = {}): Preset => {
     prefix = 'ui',
     variants = 'open|checked|selected|active|disabled',
     selector = 'data-headlessui-state',
+    isAttrBoolean = false,
   } = options
 
   return {
@@ -32,11 +38,14 @@ const presetPrimitives = (options: PrimitivesOptions = {}): Preset => {
         const regex = new RegExp(`^${prefix}(-not)?-(${variants})[:-]`)
         const match = matcher.match(regex)
         if (match) {
+          const attrGen = !isAttrBoolean
+            ? `[${selector}~='${match[2]}']`
+            : `[${selector}-${match[2]}]`
           return {
             matcher: matcher.slice(match[0].length),
             selector: (s: any) => (match[1] === '-not')
-              ? `${s}[${selector}]:not([${selector}~='${match[2]}'])`
-              : `${s}[${selector}~='${match[2]}']`,
+              ? `${s}[${selector}]:not(${attrGen})`
+              : `${s}${attrGen}`,
           }
         }
         else {
@@ -97,7 +106,7 @@ const presetKobalte = (options: KobalteOptions = {}): Preset => {
     prefix = 'ui',
   } = options
   const variants = 'valid|invalid|required|disabled|readonly|checked|indeterminate|selected|pressed|expanded|hover|focus|focus-visible|active'
-  return presetPrimitives({ prefix, variants, selector: 'data' })
+  return presetPrimitives({ prefix, variants, selector: 'data', isAttrBoolean: true })
 }
 
 export { presetHeadlessUi, presetRadixUi, presetKobalte }

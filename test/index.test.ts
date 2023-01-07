@@ -50,6 +50,6 @@ describe('unocss-preset-kobalte', () => {
   test('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-selected:foo"></div>', { preflights: false, minify: true })
-    expect(css).toMatch(`.${e('ui-selected:foo')}[data~='selected']{name:bar;}`)
+    expect(css).toMatch(`.${e('ui-selected:foo')}[data-selected]{name:bar;}`)
   })
 })

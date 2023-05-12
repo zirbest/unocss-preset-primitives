@@ -84,4 +84,3 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
     </Menu>
   </div>
 </template>
-

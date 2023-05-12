@@ -2,7 +2,7 @@
   "name": "unocss-preset-primitives",
   "type": "module",
   "version": "0.0.1-beta.5",
-  "packageManager": "pnpm@7.12.0",
+  "packageManager": "pnpm@7.32.4",
   "description": "A UnoCSS preset and variants for styling headlessui, radix-ui, kobalte state or custom one",
   "author": "zirbest <zirbst@gmail.com>",
   "license": "MIT",
@@ -57,24 +57,24 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@unocss/core": "^0.45.29"
+    "@unocss/core": "^0.51.12"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
-    "@antfu/ni": "^0.18.2",
-    "@antfu/utils": "^0.5.2",
-    "@types/node": "^18.11.0",
-    "@vitest/ui": "^0.24.3",
-    "bumpp": "^8.2.1",
-    "eslint": "^8.25.0",
-    "eslint-plugin-vue": "^9.6.0",
+    "@antfu/eslint-config": "^0.38.6",
+    "@antfu/ni": "^0.21.3",
+    "@antfu/utils": "^0.7.2",
+    "@types/node": "^18.16.8",
+    "@vitest/ui": "^0.31.0",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-vue": "^9.12.0",
     "esno": "^0.16.3",
-    "pnpm": "^7.13.4",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.8.4",
-    "unbuild": "^0.9.1",
-    "unocss": "^0.45.29",
-    "vite": "^3.1.8",
-    "vitest": "^0.23.4"
+    "pnpm": "^7.32.4",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "unocss": "^0.51.12",
+    "vite": "^4.3.5",
+    "vitest": "^0.31.0"
   }
 }

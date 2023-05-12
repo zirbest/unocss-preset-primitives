@@ -23,7 +23,7 @@ export interface PrimitivesOptions {
   isAttrBoolean?: boolean
 }
 
-const presetPrimitives = (options: PrimitivesOptions = {}): Preset => {
+function presetPrimitives(options: PrimitivesOptions = {}): Preset {
   const {
     prefix = 'ui',
     variants = 'open|checked|selected|active|disabled',
@@ -66,7 +66,7 @@ export interface HeadlessUiOptions {
   prefix?: string
 }
 
-const presetHeadlessUi = (options: HeadlessUiOptions = {}): Preset => {
+function presetHeadlessUi(options: HeadlessUiOptions = {}): Preset {
   const {
     prefix = 'ui',
   } = options
@@ -83,7 +83,7 @@ export interface RadixUiOptions {
   prefix?: string
 }
 
-const presetRadixUi = (options: RadixUiOptions = {}): Preset => {
+function presetRadixUi(options: RadixUiOptions = {}): Preset {
   const {
     prefix = 'ui',
   } = options
@@ -101,7 +101,7 @@ export interface KobalteOptions {
   prefix?: string
 }
 
-const presetKobalte = (options: KobalteOptions = {}): Preset => {
+function presetKobalte(options: KobalteOptions = {}): Preset {
   const {
     prefix = 'ui',
   } = options

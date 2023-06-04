@@ -9,11 +9,20 @@ You can find the code inside the [playground](https://github.com/zirbest/unocss-
 
 # Usage
 
-``` html
+``` vue
+<MenuItem class="ui-active:bg-violet-5 ui-active:text-white ui-not-active:text-gray-900">
+  Options
+</MenuItem>
+
 <MenuItem>
-  <button class="ui-active:bg-violet-5 ui-active:text-white ui-not-active:text-gray-900" >
-    Options
-  </button>
+</MenuItem>
+
+<!-- using presetAttributify -->
+<MenuItem
+  ui-active="bg-violet-5 text-white"
+  ui-not-active="text-gray-900"
+  >
+  Options
 </MenuItem>
 ```
 ## headlessui
@@ -88,3 +97,4 @@ Unocss({
 | `ui-selected` | `ui-not-selected` |
 | `ui-active`   | `ui-not-active`   |
 | `ui-disabled` | `ui-not-disabled` |
+| `...`         | `...`             |

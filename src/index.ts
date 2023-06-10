@@ -105,7 +105,7 @@ function presetKobalte(options: KobalteOptions = {}): Preset {
   const {
     prefix = 'ui',
   } = options
-  const variants = 'valid|invalid|required|disabled|readonly|checked|indeterminate|selected|pressed|expanded|opened|closed|highlighted|current';
+  const variants = 'valid|invalid|required|disabled|readonly|checked|indeterminate|selected|pressed|expanded|opened|closed|highlighted|current'
   return presetPrimitives({ prefix, variants, selector: 'data', isAttrBoolean: true })
 }
 

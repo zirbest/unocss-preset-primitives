@@ -12,5 +12,6 @@ declare module 'vue' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Switch: typeof import('./src/components/Switch.vue')['default']
   }
 }

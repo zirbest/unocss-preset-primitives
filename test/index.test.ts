@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { createGenerator, escapeSelector as e } from '@unocss/core'
+import { createGenerator } from '@unocss/core'
 import presetPrimitives, { presetHeadlessUi, presetKobalte, presetRadixUi } from '../src/index'
 
 describe('unocss-preset-primitives', () => {

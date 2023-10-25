@@ -3,6 +3,7 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
+  transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
 import { presetHeadlessUi } from '../src/index'
@@ -18,5 +19,8 @@ export default defineConfig({
       warn: true,
     }),
   ],
-  transformers: [transformerVariantGroup()],
+  transformers: [
+    transformerVariantGroup(),
+    transformerDirectives(),
+  ],
 })

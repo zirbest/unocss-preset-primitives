@@ -9,7 +9,7 @@ export interface PrimitivesOptions {
    */
   prefix?: string
   /**
-   * @default 'open|checked|selected|active|disabled'
+   * @default 'open|checked|selected|active|disabled|focus-visible'
    */
   variants?: string
   /**
@@ -26,7 +26,7 @@ export interface PrimitivesOptions {
 function presetPrimitives(options: PrimitivesOptions = {}): Preset {
   const {
     prefix = 'ui',
-    variants = 'open|checked|selected|active|disabled',
+    variants = 'open|checked|selected|active|disabled|focus-visible',
     selector = 'data-headlessui-state',
     isAttrBoolean = false,
   } = options

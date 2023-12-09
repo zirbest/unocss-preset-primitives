@@ -11,7 +11,7 @@ describe('unocss-preset-primitives', () => {
   test('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-open:foo"></div>', { preflights: false, minify: true })
-    expect(css).toMatchInlineSnapshot('".ui-open\\\\:foo[data-headlessui-state~=\'open\'],:where([data-headlessui-state~=\'open\']) .ui-open\\\\:foo{name:bar;}"')
+    expect(css).toMatchInlineSnapshot(`".ui-open\\:foo[data-headlessui-state~='open'],:where([data-headlessui-state~='open']) .ui-open\\:foo{name:bar;}"`)
   })
 })
 
@@ -24,7 +24,7 @@ describe('unocss-preset-headlessui', () => {
   test('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-open:foo"></div>', { preflights: false, minify: true })
-    expect(css).toMatchInlineSnapshot('".ui-open\\\\:foo[data-headlessui-state~=\'open\'],:where([data-headlessui-state~=\'open\']) .ui-open\\\\:foo{name:bar;}"')
+    expect(css).toMatchInlineSnapshot(`".ui-open\\:foo[data-headlessui-state~='open'],:where([data-headlessui-state~='open']) .ui-open\\:foo{name:bar;}"`)
   })
 })
 
@@ -37,7 +37,7 @@ describe('unocss-preset-radixui', () => {
   test('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-open:foo"></div>', { preflights: false, minify: true })
-    expect(css).toMatchInlineSnapshot('".ui-open\\\\:foo[data-state~=\'open\'],:where([data-state~=\'open\']) .ui-open\\\\:foo{name:bar;}"')
+    expect(css).toMatchInlineSnapshot(`".ui-open\\:foo[data-state~='open'],:where([data-state~='open']) .ui-open\\:foo{name:bar;}"`)
   })
 })
 
@@ -50,6 +50,6 @@ describe('unocss-preset-kobalte', () => {
   test('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-selected:foo"></div>', { preflights: false, minify: true })
-    expect(css).toMatchInlineSnapshot('".ui-selected\\\\:foo[data-selected],:where([data-selected]) .ui-selected\\\\:foo{name:bar;}"')
+    expect(css).toMatchInlineSnapshot(`".ui-selected\\:foo[data-selected],:where([data-selected]) .ui-selected\\:foo{name:bar;}"`)
   })
 })

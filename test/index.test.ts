@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { createGenerator } from '@unocss/core'
 import presetPrimitives, { presetHeadlessUi, presetKobalte, presetRadixUi } from '../src/index'
 
@@ -8,7 +8,7 @@ describe('unocss-preset-primitives', () => {
     presets: [presetPrimitives({ prefix: 'ui', variants: 'open|disable', selector: 'data-headlessui-state' })],
   })
 
-  test('should generate css for an exposed state', async () => {
+  it('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-open:foo"></div>', { preflights: false, minify: true })
     expect(css).toMatchInlineSnapshot(`".ui-open\\:foo[data-headlessui-state~='open'],:where([data-headlessui-state~='open']) .ui-open\\:foo{name:bar;}"`)
@@ -21,7 +21,7 @@ describe('unocss-preset-headlessui', () => {
     presets: [presetHeadlessUi({ prefix: 'ui' })],
   })
 
-  test('should generate css for an exposed state', async () => {
+  it('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-open:foo"></div>', { preflights: false, minify: true })
     expect(css).toMatchInlineSnapshot(`".ui-open\\:foo[data-headlessui-state~='open'],:where([data-headlessui-state~='open']) .ui-open\\:foo{name:bar;}"`)
@@ -34,7 +34,7 @@ describe('unocss-preset-radixui', () => {
     presets: [presetRadixUi({ prefix: 'ui' })],
   })
 
-  test('should generate css for an exposed state', async () => {
+  it('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-open:foo"></div>', { preflights: false, minify: true })
     expect(css).toMatchInlineSnapshot(`".ui-open\\:foo[data-state~='open'],:where([data-state~='open']) .ui-open\\:foo{name:bar;}"`)
@@ -47,7 +47,7 @@ describe('unocss-preset-kobalte', () => {
     presets: [presetKobalte({ prefix: 'ui' })],
   })
 
-  test('should generate css for an exposed state', async () => {
+  it('should generate css for an exposed state', async () => {
     const { css } = await uno
       .generate('<div class="ui-selected:foo"></div>', { preflights: false, minify: true })
     expect(css).toMatchInlineSnapshot(`".ui-selected\\:foo[data-selected],:where([data-selected]) .ui-selected\\:foo{name:bar;}"`)

@@ -1,4 +1,4 @@
-import type { Preset } from '@unocss/core'
+import type { Preset, Variant } from '@unocss/core'
 
 /**
  * @public
@@ -23,7 +23,7 @@ export interface PrimitivesOptions {
   isAttrBoolean?: boolean
 }
 
-function presetPrimitives(options: PrimitivesOptions = {}): Preset {
+function presetVariants(options: PrimitivesOptions = {}): Variant {
   const {
     prefix = 'ui',
     variants = 'open|checked|selected|active|disabled',
@@ -32,26 +32,32 @@ function presetPrimitives(options: PrimitivesOptions = {}): Preset {
   } = options
 
   return {
+    name: 'unocss-variant-primitives',
+    match: (matcher: string) => {
+      const regex = new RegExp(`^${prefix}(-not)?-(${variants})[:-]`)
+      const match = matcher.match(regex)
+
+      if (!match)
+        return matcher
+
+      const attrGen = !isAttrBoolean
+        ? `[${selector}~='${match[2]}']`
+        : `[${selector}-${match[2]}]`
+      return {
+        matcher: matcher.slice(match[0].length),
+        selector: (s: any) => (match[1] === '-not')
+          ? `${s}[${selector}]:not(${attrGen}),:where([${selector}]:not(${attrGen})) ${s}:not(${selector})`
+          : `${s}${attrGen},:where(${attrGen}) ${s}`,
+      }
+    },
+  }
+}
+
+function presetPrimitives(options: PrimitivesOptions = {}): Preset {
+  return {
     name: 'unocss-preset-primitives',
     variants: [
-      (matcher: string) => {
-        const regex = new RegExp(`^${prefix}(-not)?-(${variants})[:-]`)
-        const match = matcher.match(regex)
-        if (match) {
-          const attrGen = !isAttrBoolean
-            ? `[${selector}~='${match[2]}']`
-            : `[${selector}-${match[2]}]`
-          return {
-            matcher: matcher.slice(match[0].length),
-            selector: (s: any) => (match[1] === '-not')
-              ? `${s}[${selector}]:not(${attrGen}),:where([${selector}]:not(${attrGen})) ${s}:not(${selector})`
-              : `${s}${attrGen},:where(${attrGen}) ${s}`,
-          }
-        }
-        else {
-          return matcher
-        }
-      },
+      presetVariants(options),
     ],
   }
 }
@@ -70,7 +76,29 @@ function presetHeadlessUi(options: HeadlessUiOptions = {}): Preset {
   const {
     prefix = 'ui',
   } = options
-  return presetPrimitives({ prefix })
+
+  return {
+    name: 'unocss-preset-primitives',
+    variants: [
+      presetVariants({ prefix }),
+      (matcher) => {
+        const regex = new RegExp(`${prefix}(-not)?-focus-visible[:-]`)
+        const match = matcher.match(regex)
+
+        if (!match)
+          return matcher
+
+        return {
+          matcher: matcher.slice(match[0].length),
+          selector: (s) => {
+            return (match[1] === '-not')
+              ? `${s}:focus:where(:not([data-headlessui-focus-visible] ${s}))`
+              : `:where([data-headlessui-focus-visible]) ${s}:focus`
+          },
+        }
+      },
+    ],
+  }
 }
 
 /**

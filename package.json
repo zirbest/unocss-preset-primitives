@@ -64,6 +64,7 @@
     "@antfu/ni": "^0.21.12",
     "@antfu/utils": "^0.7.6",
     "@types/node": "^20.10.4",
+    "@unocss/autocomplete": "0.59.0-beta.1",
     "@vitest/ui": "^1.0.4",
     "bumpp": "^9.2.0",
     "eslint": "^8.55.0",

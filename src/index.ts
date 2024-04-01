@@ -54,7 +54,7 @@ function presetVariants(options: PrimitivesOptions = {}): Variant {
       `${prefix}-(${variants})(:|-)`,
       `${prefix}-not-(${variants})(:|-)`,
     ],
-  };
+  }
 }
 
 function presetPrimitives(options: PrimitivesOptions = {}): Preset {

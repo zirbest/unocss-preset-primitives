@@ -46,8 +46,8 @@ function presetVariants(options: PrimitivesOptions = {}): Variant {
       return {
         matcher: matcher.slice(match[0].length),
         selector: (s: any) => (match[1] === '-not')
-            ? `${s}[${selector}]:not(${attrGen}),:where([${selector}]:not(${attrGen})) ${s}:not(${selector})`
-            : `${s}${attrGen},:where(${attrGen}) ${s}`,
+          ? `${s}[${selector}]:not(${attrGen}),:where([${selector}]:not(${attrGen})) ${s}:not(${selector})`
+          : `${s}${attrGen},:where(${attrGen}) ${s}`,
       }
     },
     autocomplete: [

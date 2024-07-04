@@ -1,8 +1,7 @@
-import type { UnocssAutocomplete } from '@unocss/autocomplete'
 import { createAutocomplete } from '@unocss/autocomplete'
 import { createGenerator } from '@unocss/core'
 import { describe, expect, it } from 'vitest'
-import presetPrimitives, { presetHeadlessUi, presetKobalte, presetRadixUi } from '../src/index'
+import { presetKobalte, presetRadixUi } from '../src/index'
 
 describe('unocss-preset-kobalte', async () => {
   const uno = createGenerator({

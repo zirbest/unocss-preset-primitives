@@ -50,6 +50,10 @@ function presetVariants(options: PrimitivesOptions = {}): Variant {
           : `${s}${attrGen},:where(${attrGen}) ${s}`,
       }
     },
+    autocomplete: [
+      `${prefix}-(${variants})(:|-)`,
+      `${prefix}-not-(${variants})(:|-)`,
+    ],
   }
 }
 
@@ -81,21 +85,27 @@ function presetHeadlessUi(options: HeadlessUiOptions = {}): Preset {
     name: 'unocss-preset-primitives',
     variants: [
       presetVariants({ prefix }),
-      (matcher) => {
-        const regex = new RegExp(`${prefix}(-not)?-focus-visible[:-]`)
-        const match = matcher.match(regex)
+      {
+        match: (matcher) => {
+          const regex = new RegExp(`${prefix}(-not)?-focus-visible[:-]`)
+          const match = matcher.match(regex)
 
-        if (!match)
-          return matcher
+          if (!match)
+            return matcher
 
-        return {
-          matcher: matcher.slice(match[0].length),
-          selector: (s) => {
-            return (match[1] === '-not')
-              ? `${s}:focus:where(:not([data-headlessui-focus-visible] ${s}))`
-              : `:where([data-headlessui-focus-visible]) ${s}:focus`
-          },
-        }
+          return {
+            matcher: matcher.slice(match[0].length),
+            selector: (s) => {
+              return (match[1] === '-not')
+                ? `${s}:focus:where(:not([data-headlessui-focus-visible] ${s}))`
+                : `:where([data-headlessui-focus-visible]) ${s}:focus`
+            },
+          }
+        },
+        autocomplete: [
+          `${prefix}-focus-visible(:|-)`,
+          `${prefix}-not-focus-visible(:|-)`,
+        ],
       },
     ],
   }

@@ -6,13 +6,15 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
-import { presetHeadlessUi } from '../src/index'
+import { presetHeadlessUi } from 'unocss-preset-primitives'
 
 export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetHeadlessUi(),
+    presetHeadlessUi({
+      prefix: 'ui',
+    }),
     presetIcons({
       cdn: 'https://esm.sh/',
       scale: 1.2,

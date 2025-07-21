@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest'
 import { presetKobalte, presetRadixUi } from '../src/index'
 
 describe('unocss-preset-kobalte', async () => {
-  const uno = createGenerator({
+  const uno = await createGenerator({
     rules: [['foo', { name: 'foo' }], ['bar', { name: 'bar' }]],
     presets: [presetKobalte()],
   })
@@ -23,7 +23,7 @@ describe('unocss-preset-kobalte', async () => {
 })
 
 describe('unocss-preset-radixui', async () => {
-  const uno = createGenerator({
+  const uno = await createGenerator({
     rules: [['foo', { name: 'foo' }], ['bar', { name: 'bar' }]],
     presets: [presetRadixUi()],
   })
